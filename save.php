@@ -2,7 +2,7 @@
 $email = $_POST['email'];
 $password = $_POST['password'];
 
-$url = "https://ptshthtnjcbngiceyjzc.supabase.co";
+$url = "https://ptshthtnjcbngiceyjzc.supabase.co/rest/v1/submissions";
 
 $data = array(
     "email" => $email,
