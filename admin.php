@@ -17,7 +17,6 @@ $data = json_decode($response, true);
 
 ?>
 
-
 <!DOCTYPE html>
 <html>
 <head>
