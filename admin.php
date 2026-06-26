@@ -47,16 +47,24 @@ exit();
             <th>Time</th>
         </tr>
 
-        <?php while($row = $result->fetch_assoc()) { ?>
+       <?php if(!empty($data)) { ?>
+    <?php foreach($data as $row) { ?>
 
-        <tr>
-            <td><?php echo $row['id']; ?></td>
-            <td><?php echo $row['email']; ?></td>
-            <td><?php echo $row['password']; ?></td>
-            <td><?php echo $row['created_at']; ?></td>
-        </tr>
+    <tr>
+        <td><?php echo $row['id']; ?></td>
+        <td><?php echo $row['email']; ?></td>
+        <td><?php echo $row['password']; ?></td>
+        <td><?php echo $row['created_at']; ?></td>
+    </tr>
 
-        <?php } ?>
+    <?php } ?>
+<?php } else { ?>
+
+    <tr>
+        <td colspan="4">No data found</td>
+    </tr>
+
+<?php } ?>
 
     </table>
 
