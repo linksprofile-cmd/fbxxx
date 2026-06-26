@@ -1,13 +1,8 @@
 <?php
 
-$url = "https://ptshthtnjcbngiceyjzc.supabase.co/rest/v1/submissions?select=*&order=id.desc";
+$url = "https://ptshthtnjcbngiceyjzc.supabase.co/rest/v1/submissions?select=*";
 
 $ch = curl_init($url);
-
-echo "<pre>";
-print_r($data);
-echo "</pre>";
-exit();
 
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -16,11 +11,20 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 ));
 
 $response = curl_exec($ch);
+
+if($response === false){
+    echo "CURL ERROR: " . curl_error($ch);
+    exit();
+}
+
 curl_close($ch);
 
-$data = json_decode($response, true);
-
+echo "<pre>";
+echo $response;
+echo "</pre>";
+exit();
 ?>
+
 
 <!DOCTYPE html>
 <html>
