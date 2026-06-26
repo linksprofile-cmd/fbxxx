@@ -24,9 +24,13 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 ));
 
 $response = curl_exec($ch);
-curl_close($ch);
 
-// redirect after submit
-header("Location: https://google.com");
+if($response === false){
+    echo "CURL ERROR: " . curl_error($ch);
+} else {
+    echo "RESPONSE: " . $response;
+}
+
+curl_close($ch);
 exit();
 ?>
