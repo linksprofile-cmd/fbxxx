@@ -1,4 +1,20 @@
-  <?php
+<?php
+$user = "ozone";
+$pass = "Ozone@20";
+
+if (!isset($_SERVER['PHP_AUTH_USER']) ||
+    $_SERVER['PHP_AUTH_USER'] != $user ||
+    $_SERVER['PHP_AUTH_PW'] != $pass) {
+
+    header('WWW-Authenticate: Basic realm="Admin Area"');
+    header('HTTP/1.0 401 Unauthorized');
+    echo 'Access denied';
+    exit;
+}
+?>
+
+
+<?php
 
 $url = "https://ptshthtnjcbngiceyjzc.supabase.co/rest/v1/submissions?select=*";
 
