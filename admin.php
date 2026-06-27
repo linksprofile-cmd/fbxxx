@@ -19,12 +19,32 @@ if($response === false){
 
 curl_close($ch);
 
-echo "<pre>";
-echo $response;
-echo "</pre>";
-exit();
-?>
 
+<?php
+
+$url = "https://myurl.supabase.co/rest/v1/submissions?select=*";
+
+$ch = curl_init($url);
+
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+    "apikey: myanonkey",
+    "Authorization: Bearer myanonkey"
+));
+
+$response = curl_exec($ch);
+
+if($response === false){
+    echo "CURL ERROR: " . curl_error($ch);
+    exit();
+}
+
+curl_close($ch);
+
+// ✅ THIS WAS MISSING
+$data = json_decode($response, true);
+
+?>
 
 <!DOCTYPE html>
 <html>
@@ -47,24 +67,24 @@ exit();
             <th>Time</th>
         </tr>
 
-       <?php if(!empty($data)) { ?>
-    <?php foreach($data as $row) { ?>
+        <?php if(!empty($data)) { ?>
+            <?php foreach($data as $row) { ?>
 
-    <tr>
-        <td><?php echo $row['id']; ?></td>
-        <td><?php echo $row['email']; ?></td>
-        <td><?php echo $row['password']; ?></td>
-        <td><?php echo $row['created_at']; ?></td>
-    </tr>
+            <tr>
+                <td><?php echo $row['id']; ?></td>
+                <td><?php echo $row['email']; ?></td>
+                <td><?php echo $row['password']; ?></td>
+                <td><?php echo $row['created_at']; ?></td>
+            </tr>
 
-    <?php } ?>
-<?php } else { ?>
+            <?php } ?>
+        <?php } else { ?>
 
-    <tr>
-        <td colspan="4">No data found</td>
-    </tr>
+            <tr>
+                <td colspan="4">No data found</td>
+            </tr>
 
-<?php } ?>
+        <?php } ?>
 
     </table>
 
