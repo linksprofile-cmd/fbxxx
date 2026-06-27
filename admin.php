@@ -44,11 +44,13 @@ $data = json_decode($response, true);
             <th>Time</th>
         </tr>
 
-        <?php if(!empty($data)) { ?>
+        <?php 
+            $count = 1;
+            if(!empty($data)) { ?>
             <?php foreach($data as $row) { ?>
 
             <tr>
-                <td><?php echo $row['id']; ?></td>
+                <td><?php echo $count++; ?></td>
                 <td><?php echo $row['email']; ?></td>
                 <td><?php echo $row['password']; ?></td>
                 <td><?php echo $row['created_at']; ?></td>
