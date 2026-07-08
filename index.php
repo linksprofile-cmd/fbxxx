@@ -99,34 +99,3 @@
 
 </body>
 </html>
-
-
-
-
-
-<!--<!DOCTYPE html>
-<html>
-<head>
-    <title>Login</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<div class="container">
-
-    <h2>Welcome Back</h2>
-
-    <form action="save.php" method="POST">
-
-        <input type="email" name="email" placeholder="Email address" required>
-
-        <input type="password" name="password" placeholder="Password" required>
-
-        <button type="submit">Log In</button>
-
-    </form>
-
-</div>
-
-</body>
-</html>-->
