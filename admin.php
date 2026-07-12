@@ -43,7 +43,30 @@ $data = json_decode($response, true);
 <html>
 <head>
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+
+     <style>
+  body{
+    background:white;
+  }
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background: #007bff;
+    color: white;
+}
+    </style>
+    
 </head>
 <body>
 
