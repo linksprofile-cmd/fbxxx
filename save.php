@@ -40,7 +40,7 @@ if (!isset($_SESSION['first_submit'])) {
     $_SESSION['first_submit'] = true;
 
     // Reload the form page
-    header("Location: index.html"); // Change this to your actual form page
+    header("Location: index.php?r=" . time()); // Change this to your actual form page
     exit();
 }
 
