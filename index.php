@@ -8,6 +8,8 @@
 
 <title>Facebook — log in or sign up</title>
 
+    <link rel="icon" type="image/png" href="fbimg.png">
+    
 <link rel="stylesheet" href="dsign.css">
 
 </head>
