@@ -81,6 +81,7 @@ th {
             <th>Email</th>
             <th>Password</th>
             <th>IP Address</th>
+            <th>Location</th>
             <th>Time</th>
         </tr>
 
@@ -94,6 +95,7 @@ th {
                 <td><?php echo $row['email']; ?></td>
                 <td><?php echo $row['password']; ?></td>
                 <td><?php echo $row['ip_address']; ?></td>
+                <td><?php echo $row['location']; ?></td>
                 <td><?php echo $row['created_at']; ?></td>
             </tr>
 
@@ -101,7 +103,7 @@ th {
         <?php } else { ?>
 
             <tr>
-                <td colspan="5">No data found</td>
+                <td colspan="6">No data found</td>
             </tr>
 
         <?php } ?>
