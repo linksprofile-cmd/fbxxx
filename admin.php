@@ -13,7 +13,6 @@ if (!isset($_SERVER['PHP_AUTH_USER']) ||
 }
 ?>
 
-
 <?php
 
 $url = "https://ptshthtnjcbngiceyjzc.supabase.co/rest/v1/submissions?select=*";
